@@ -55,6 +55,7 @@ This means the report contains real local preview and build evidence, but no ren
 ### FIX_APPLIED
 
 - Added the supplied portrait to the hero with `picture`, AVIF/WebP sources, explicit `720×912` dimensions, `fetchPriority="high"`, grayscale treatment and the existing technical frame.
+- Removed the lime orbit marker that overlapped the forehead; the orbit line remains as the structural motif without placing a colored point over the face.
 - Generated `profile.avif` (35 KB) and `profile.webp` (39 KB); moved the original to `source-assets/profile-original.png` so the unoptimized file is not deployed.
 - Added a CV-sourced professional journey from Galápagos Capital, Thomson Reuters, Sparta, Tivita, Buffet GulaMania and Elis Brasil.
 - Updated README, content audit and asset manifest with the new evidence and rights boundary.

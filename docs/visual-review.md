@@ -14,6 +14,7 @@ Status: BLOCKED for rendered-browser certification — static layout review and 
 ### FIX_APPLIED
 
 - Added the supplied portrait through responsive AVIF/WebP sources with explicit dimensions and intentional grayscale/crop treatment.
+- Removed the lime orbit point after visual feedback showed it sitting on the forehead; retained the orbit stroke only.
 - Preserved the original at `source-assets/profile-original.png` and kept only 35 KB AVIF / 39 KB WebP derivatives in `public/`.
 - Added a compact CV-sourced journey section while retaining the existing visual system.
 
