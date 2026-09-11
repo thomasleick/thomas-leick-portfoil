@@ -15,6 +15,7 @@ The accessible Canon at `/home/thomasleick/K-libra System/docs/canon/K-LIBRA_CAN
 - The authorized [LinkedIn profile](https://br.linkedin.com/in/thomasleick) is indexed as Thomas Andrioli Leick in São Paulo and identifies him as a senior full-stack developer. The portfolio uses the more durable title “senior software engineer / systems builder”; it does **not** quote a duration of experience.
 - The authorized profile URLs are GitHub, Instagram, Chess.com and LinkedIn. The portfolio links to each provided/verified URL without copying external visual assets.
 - The mission statement supplied by Thomas explicitly authorizes concise representation of chess, long-term strength practice (approximately 22 years), coffee, Monster as a textual reference only, and TEA through a respectful secondary infinity motif.
+- The supplied CV `Thomas_Leick_Senior_Backend_Node_CV_EN_Projects.pdf` identifies Thomas as Senior Software Engineer / Full Stack Engineer / Backend Specialist, lists São Paulo, USP Physics and Driven full-stack education, and provides the experience sequence used in the journey section.
 
 ### K-Libra evidence
 
@@ -52,8 +53,8 @@ The portfolio intentionally does not claim metrics, number of customers, revenue
 
 ## MISSING_EVIDENCE
 
-- **Personal imagery:** The required Chrome session could not be connected through the available browser-control surface. Instagram was not accessed through a bypass or a substitute session. No image was downloaded, copied or hotlinked. The portfolio uses an explicit asset slot and `public/assets/portrait/README.md` contract instead.
+- **Instagram imagery:** The required Chrome session could not be connected through the available browser-control surface. Instagram was not accessed through a bypass or a substitute session. No Instagram image was downloaded. The portrait used by the site was supplied directly by Thomas, optimized locally, and recorded in the asset manifest.
 - **Chess profile details:** The authorized URL is linked, but the public browser response did not expose a reliable player profile. No rating, game count, membership date or achievement is claimed.
-- **Experience timeline:** No reliable chronological public record was compiled for a timeline. The site omits an experience chronology rather than inventing one.
+- **Experience timeline:** The chronology is now sourced from the supplied CV. No additional unverified roles or dates were added.
 - **K-Libra/Vocal Flow remote behavior:** Public URLs were supplied, but source-backed local facts are used for functionality. Remote application state, provider configuration and deployment status remain unclaimed.
 - **Additional GitHub projects:** Only the identity/profile evidence and primary project evidence were sufficient for this first version. No third project card is included merely to fill space.

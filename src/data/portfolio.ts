@@ -13,7 +13,7 @@ export type Project = {
 export const profile = {
   name: 'Thomas Andrioli Leick',
   role: 'Senior software engineer · systems builder',
-  email: 'thomasaleick@gmail.com',
+  email: 'leick.thom90@gmail.com',
   links: {
     github: 'https://github.com/thomasleick',
     linkedin: 'https://br.linkedin.com/in/thomasleick',
@@ -77,6 +77,15 @@ export const capabilities = [
     text: 'Design practical workflows around inference, audio, MIDI and feedback without hiding their uncertainty.',
     tags: ['TensorFlow.js', 'Tone.js', 'MIDI', 'OpenAI'],
   },
+] as const
+
+export const experience = [
+  { company: 'Galápagos Capital', role: 'Tech Leader', period: 'Jun 2026 — present', focus: 'Architecture authority, technical standards, full-stack and cloud evolution.' },
+  { company: 'Thomson Reuters', role: 'Senior Software Engineer 1', period: 'Mar 2026 — Jun 2026', focus: 'Distributed Node.js systems, cloud architecture, security and automated testing.' },
+  { company: 'Sparta Fundos de Investimento', role: 'Senior Software Engineer / Squad Lead', period: 'Jul 2024 — Jan 2026', focus: 'Financial systems, risk APIs, event-driven pipelines and database performance.' },
+  { company: 'Tivita Tecnologia', role: 'Full-Stack Developer', period: 'Jan 2022 — Jan 2023', focus: 'Administrative management product with Node.js, TypeScript, MongoDB and React.' },
+  { company: 'Buffet GulaMania', role: 'Full-Stack Developer', period: 'Jul 2019 — Jan 2022', focus: 'Corporate web, internal sales support systems and business-rule APIs.' },
+  { company: 'Elis Brasil', role: 'Data Analyst', period: 'Oct 2018 — May 2019', focus: 'Automated accounting and financial reports and operational-control tools.' },
 ] as const
 
 export const personalSignals = [
