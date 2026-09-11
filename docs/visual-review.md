@@ -1,7 +1,29 @@
 # Visual review record
 
 Date: 2026-09-11  
-Status: PARTIAL — static layout review complete; interactive browser rendering pending because the requested Chrome browser connection was unavailable in this session.
+Status: BLOCKED for rendered-browser certification — static layout review and local production checks complete; Chrome discovery returned an empty browser list in this session.
+
+## BEFORE_FIX / FIX_APPLIED / AFTER_FIX
+
+### BEFORE_FIX
+
+- The hero used a clearly labelled portrait slot rather than a supplied image.
+- The supplied portrait existed as a 1.5 MB PNG in the deployable public tree.
+- The page had no CV-derived professional journey section.
+
+### FIX_APPLIED
+
+- Added the supplied portrait through responsive AVIF/WebP sources with explicit dimensions and intentional grayscale/crop treatment.
+- Preserved the original at `source-assets/profile-original.png` and kept only 35 KB AVIF / 39 KB WebP derivatives in `public/`.
+- Added a compact CV-sourced journey section while retaining the existing visual system.
+
+### AFTER_FIX
+
+- Typecheck, lint and Vite production build pass.
+- Local Vite preview served the document and optimized assets with HTTP 200.
+- Browser rendering, screenshot capture, actual overflow measurements, console inspection and Lighthouse remain blocked by unavailable Chrome.
+
+Detailed evidence is recorded in [browser-qa-report.md](browser-qa-report.md).
 
 ## Static responsive review
 

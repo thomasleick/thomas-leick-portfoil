@@ -30,7 +30,7 @@ The accessible Canon at `/home/thomasleick/K-libra System/docs/canon/K-LIBRA_CAN
 - The local Vocal Flow help copy describes an interactive vocal-training tool for scales, intervals and songs via MIDI with real-time pitch feedback. Source: `vocal-flow/src/pages/Help.tsx`.
 - `TrackStudio.tsx` describes private uploaded tracks/stems, local microphone and melody estimation, a practice mixer, and MIDI-reference alignment. Confirmed melody notes and aligned MIDI can be target sources; the UI explicitly distinguishes suggestions from confirmed notes.
 - The local package names React, Vite, TensorFlow.js, Tone.js, MIDI tooling and Supabase. These source facts support the technical labels in the Vocal Flow card.
-- Public destination supplied in the mission: [Vocal Flow](https://vocal-flow-pi.vercel.app/app/).
+- Public destination supplied in the mission: [Vocal Flow](https://vocal-flow-pi.vercel.app/).
 
 ## INFERENCE
 

@@ -48,7 +48,7 @@ export const projects: readonly Project[] = [
       'Track Studio brings private stems, a synchronized practice mixer, local microphone pitch estimation and MIDI reference alignment into one workflow. Suggested melody data only becomes a target after review, keeping the practice signal explicit.',
     capabilities: ['private tracks', 'stem workflow', 'MIDI reference', 'pitch feedback', 'local analysis'],
     stack: ['React', 'Vite', 'TensorFlow.js', 'Tone.js', 'MIDI', 'Supabase'],
-    links: [{ label: 'Open Vocal Flow', href: 'https://vocal-flow-pi.vercel.app/app/' }],
+    links: [{ label: 'Open Vocal Flow', href: 'https://vocal-flow-pi.vercel.app/' }],
   },
 ]
 
