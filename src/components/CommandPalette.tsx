@@ -8,7 +8,12 @@ type Action = { label: string; detail: string; href: string; external?: boolean 
 
 const actions: readonly Action[] = [
   ...navItems.map((item) => ({ label: item.label, detail: 'Jump to section', href: item.href })),
-  ...projects.map((project) => ({ label: project.title, detail: 'Open live product', href: project.links[0].href, external: true })),
+  ...projects.map((project) => ({
+    label: project.title,
+    detail: project.id === 'k-libra' ? 'Read institutional site' : 'Open live product',
+    href: project.links[0].href,
+    external: true,
+  })),
   { label: 'GitHub', detail: 'View public repositories', href: profile.links.github, external: true },
   { label: 'Chess', detail: 'Open Chess.com profile', href: profile.links.chess, external: true },
   { label: 'Instagram', detail: 'Open Instagram profile', href: profile.links.instagram, external: true },

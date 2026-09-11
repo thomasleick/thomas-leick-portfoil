@@ -23,7 +23,8 @@ The accessible Canon at `/home/thomasleick/K-libra System/docs/canon/K-LIBRA_CAN
 - Local API modules independently include accounting, AI, audit, auth, customers, dashboard, financial, fiscal, inventory, payments, products, returns, sales, shipping and support. Source: `K-Libra_system_api/src/modules/`.
 - The local web package names React 19, Next.js, Framer Motion and TypeScript. The API package names NestJS, Fastify and `@supabase/supabase-js`. These are source-package facts, not a claim about remote production configuration.
 - Fiscal UI source expressly treats environment as part of fiscal state identity and distinguishes authorized production documents. This supports describing the product as one where fiscal state has operational consequence, without asserting provider or production certification.
-- Public destinations supplied in the mission are [K-Libra application](https://k-libra-system-web.vercel.app/) and [K-Libra product site](https://k-libra-system-site.vercel.app/).
+- Public destinations supplied in the mission are the [K-Libra ERP login/customer portal](https://k-libra-system-web.vercel.app/login) and the [K-Libra institutional/product site](https://k-libra-system-site.vercel.app/#conteudo).
+- Thomas clarified that the ERP is a closed/authenticated product surface. The public institutional site documents the K-Libra System and PX3/Fluxo Digital; customers who purchase a PX3 printer receive access to the customer portal at the ERP login.
 
 ### Vocal Flow evidence
 
@@ -35,6 +36,7 @@ The accessible Canon at `/home/thomasleick/K-libra System/docs/canon/K-LIBRA_CAN
 ## INFERENCE
 
 - The K-Libra route/module map is strong evidence of a broad operational product surface. It supports a case-study narrative about connected responsibilities. It does **not** prove production uptime, user count, financial outcomes, integration status or commercial adoption.
+- Because the ERP is closed, a public visitor cannot inspect its authenticated screens without customer access. The portfolio therefore presents the domain architecture, links the institutional site as the public reference, and labels the ERP login as a customer portal rather than an open demo.
 - The Vocal Flow source makes a privacy-conscious workflow plausible because its UI and local code refer to private stems and local pitch processing. This is represented as product workflow evidence, not an independently certified privacy guarantee.
 - The selected stack labels identify technologies present in inspected source packages. They do not claim Thomas was the sole author of every line, that every dependency is active in every runtime, or that a local dependency certifies deployment.
 
@@ -45,6 +47,7 @@ Approved-by-evidence portfolio phrasing:
 - “Engineering the structure behind serious products.”
 - “A product surface where commercial operations, inventory, finance, fiscal state and customer context must agree.”
 - “The local product map exposes dedicated domains for sales, products, inventory, payments, financial operations, fiscal documents, customers, returns, shipping and intelligence.”
+- “K-Libra is a closed ERP; the institutional site explains its Fluxo Digital, while PX3 customers receive access to the customer portal.”
 - “A vocal-practice environment that treats audio, timing and pitch feedback as one deliberate system.”
 - “Suggested melody data only becomes a target after review, keeping the practice signal explicit.”
 - “Technology follows the boundary.”

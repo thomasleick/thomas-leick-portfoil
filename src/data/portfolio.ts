@@ -26,16 +26,16 @@ export const projects: readonly Project[] = [
   {
     id: 'k-libra',
     label: '01',
-    eyebrow: 'Operational system · primary case study',
+    eyebrow: 'Private ERP · public product surface',
     title: 'K-Libra',
-    description: 'A product surface where commercial operations, inventory, finance, fiscal state and customer context must agree.',
+    description: 'A closed ERP for the operational side of a 3D-printing business, paired with the institutional site that explains its Fluxo Digital.',
     detail:
-      'The local product map exposes dedicated domains for sales, products, inventory, payments, financial operations, fiscal documents, customers, returns, shipping and intelligence. The interesting part is not the menu—it is preserving the boundaries between those decisions.',
-    capabilities: ['sales', 'inventory', 'financial', 'fiscal', 'payments', 'customers', 'returns', 'shipping', 'AI'],
+      'The ERP is authenticated, so this case study makes its architecture legible without pretending the back office is public. I also built the institutional site; customers who purchase a PX3 printer receive access to the customer portal.',
+    capabilities: ['closed ERP', 'institutional site', 'customer portal', 'sales', 'inventory', 'financial', 'fiscal', 'shipping'],
     stack: ['React', 'Next.js', 'NestJS', 'Fastify', 'Supabase', 'TypeScript'],
     links: [
-      { label: 'Open product', href: 'https://k-libra-system-web.vercel.app/' },
-      { label: 'See the product site', href: 'https://k-libra-system-site.vercel.app/' },
+      { label: 'Read the institutional site', href: 'https://k-libra-system-site.vercel.app/#conteudo' },
+      { label: 'Customer portal · PX3 clients', href: 'https://k-libra-system-web.vercel.app/login' },
     ],
   },
   {

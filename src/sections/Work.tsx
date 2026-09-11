@@ -5,7 +5,7 @@ import type { CSSProperties } from 'react'
 
 function ArchitectureMap() {
   const nodes = ['sales', 'inventory', 'financial', 'fiscal', 'payments', 'customers', 'returns', 'shipping', 'AI']
-  return <div className="architecture-map" role="img" aria-label="K-Libra domain map">
+  return <div className="architecture-map" role="img" aria-label="K-Libra private ERP domain map">
     <span className="map-core">K</span>
     <svg viewBox="0 0 400 300" aria-hidden="true"><path d="M200 150 65 62M200 150 195 28M200 150 336 60M200 150 64 151M200 150 336 150M200 150 65 240M200 150 195 272M200 150 336 240" /></svg>
     {nodes.map((node, index) => <span key={node} className={`map-node node-${index}`}>{node}</span>)}
