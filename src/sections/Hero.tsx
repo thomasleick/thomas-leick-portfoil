@@ -14,7 +14,7 @@ export function Hero() {
       <aside className="hero-portrait-slot" aria-label="Portrait of Thomas Andrioli Leick">
         <picture><source type="image/avif" srcSet="/profile.avif" /><source type="image/webp" srcSet="/profile.webp" /><img className="portrait-image" src="/profile.webp" width="720" height="912" fetchPriority="high" decoding="async" alt="Portrait of Thomas Andrioli Leick wearing glasses" /></picture>
         <div className="portrait-corner portrait-corner-a" /><div className="portrait-corner portrait-corner-b" />
-        <div className="portrait-orbit" aria-hidden="true"><span /></div>
+        <div className="portrait-orbit" aria-hidden="true" />
         <p>Thomas / systems builder<br /><strong>portrait source</strong></p>
         <small>asset.local / 01</small>
       </aside>
