@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://thomas-leick-portfoil.vercel.app/sitemap.xml

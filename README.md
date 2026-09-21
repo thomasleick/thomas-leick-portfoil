@@ -56,13 +56,8 @@ The hero uses the supplied portrait through optimized AVIF/WebP derivatives. The
 - Pointer-independent navigation
 - Motion is cosmetic; `prefers-reduced-motion` suppresses animated/reveal behavior
 
-## Deployment readiness
+## Internationalization and SEO
 
-The project is static-host ready after `npm run build`; publish `dist/`. Before deployment:
+English is the default route (`/`); Brazilian Portuguese is available at `/pt/`. Both routes have localized document metadata and canonical URLs, reciprocal `hreflang` links, absolute social image URLs, and entries in `public/sitemap.xml`. The build writes the Portuguese static page to `dist/pt/index.html`.
 
-1. Add a canonical URL in `index.html` using the approved production origin.
-2. Add a production-origin `sitemap.xml` only once that origin is final.
-3. Replace the supplied portrait only with a newly approved source and regenerated derivatives if desired.
-4. Re-run visual and automated accessibility checks in the deployed browser environment.
-
-No environment variables, secrets, contact-form relay, analytics identifiers or K-Libra runtime dependencies are required.
+No environment variables, secrets, contact-form relay, analytics identifiers or K-Libra runtime dependencies are required. Local production build and browser QA are documented in [the QA report](docs/browser-qa-report.md); deployed browser behavior and Lighthouse metrics remain unverified.

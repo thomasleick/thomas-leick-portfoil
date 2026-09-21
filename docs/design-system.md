@@ -2,51 +2,37 @@
 
 ## Intent
 
-The visual language is an engineering editorial. It uses measured graphite surfaces, ultraviolet as a product-memory accent, cold paper for contrast and a one-pixel network grid. It avoids the tropes of a “developer template”: no technology-logo wall, neon-glow overload, fake terminal output, stock device mockups or dashboard-shaped hero.
+An engineering editorial built from graphite surfaces, violet identity, restrained lime status/focus accents, large typography, generous spacing and monospace metadata. The portfolio keeps its existing visual language; K-Libra, Vocalis and AI-SDLC receive related but distinct diagrams instead of generic product cards or stock AI imagery.
 
 ## Tokens
 
 | Token | Value | Purpose |
 | --- | --- | --- |
-| `--ink` | `#0a0b0f` | Near-black primary ground |
+| `--ink` | `#0a0b0f` | Near-black page background |
 | `--ink-raised` | `#11131a` | Card surfaces |
-| `--paper` | `#eff0f2` | Primary readable text / contact inversion |
+| `--paper` | `#eff0f2` | Main text and contact section |
 | `--muted` | `#9ca1af` | Supporting copy |
+| `--faint` | `#858b9a` | Metadata with improved contrast |
 | `--violet-bright` | `#c4b0ff` | Identity and interaction highlight |
-| `--lime` | `#c8ff62` | Strictly semantic status/focus accent |
-| `--line` | `rgba(239,240,242,.13)` | Structural rules |
+| `--lime` | `#c8ff62` | Status and focus accent |
 
-The palette is intentionally not a green “Matrix” palette. Lime exists only as a status dot, a focus ring and one audio marker; violet holds the product reference without turning the personal identity into K-Libra branding.
+## Content and layout
 
-## Typography
+- The English hero sets positioning; case studies carry problem, challenge, role, decisions, evidence, selected stack and one project-specific visual.
+- K-Libra uses a selected-domain concept map and labels AI as an assistance layer whose suggestions do not own state.
+- Vocalis separates current product workflow from a research-direction benchmark diagram; uncertainty states remain visible.
+- AI-SDLC uses a mission-governance/evaluation flow without campaign vanity metrics.
+- Portuguese uses the same typed content model and component structure through `/pt/`; labels wrap instead of being hidden with ellipses.
+- Contact inverts to cold paper for a deliberate final section.
 
-- Display: system sans with tight tracking and large editorial scale.
-- Emphasis: a restrained serif italic for a single conceptual word, not whole sections.
-- Technical metadata: platform monospace stack.
+## Motion and accessibility
 
-No network font request is used. This is privacy-preserving and prevents a font request from delaying first render. Brazilian Portuguese text can be introduced later without changing the component system.
+- Native anchors, buttons and dialogs retain keyboard behavior. The header language switch has an accessible name and active locale indication.
+- A skip link precedes the page content; section headings receive focus after mobile anchor navigation.
+- `:focus-visible` uses a high-contrast outline. Metadata and contact label colors were adjusted; rendered spot checks measured at least 4.56:1 for the sampled text.
+- `useReveal` is cosmetic; `prefers-reduced-motion` exposes pending content and suppresses animation.
+- Decorative SVGs are hidden from the accessibility tree, while case diagrams have labeled figures and meaningful content.
 
-## Layout principles
+## Internationalized metadata
 
-1. **A clear engineering hierarchy.** The hero names the kind of problem Thomas works on before presenting any technology.
-2. **Evidence as composition.** K-Libra is visualized as a domain map; Vocal Flow as a signal timeline. Both visuals describe the product rather than decorate it.
-3. **Personal references at low volume.** Chess notation, barbell geometry, coffee microcopy and the infinity path are discovered after the work, not used as branding props.
-4. **Intentional inversion.** The contact region turns into cold paper to signal a genuine change of state and provide a visual landing point.
-5. **Mobile is the base constraint.** One-column rhythm, minimum 320px width, clipped internal visual compositions and touchable native-dialog controls come before wider grids.
-
-## Motion
-
-- SVG/network traces imply connection and state propagation.
-- The audio composition breathes on its own rhythm.
-- Section reveals use `IntersectionObserver`; content remains present when JavaScript fails.
-- Every animation is suppressed under `prefers-reduced-motion: reduce`.
-
-No scroll-jacking, artificial loading sequence, WebGL canvas or custom cursor is used.
-
-## Accessibility decisions
-
-- Native anchors, buttons and dialogs carry the interaction.
-- The mobile menu and command palette use native modal focus behavior.
-- Decorative SVGs are hidden from the accessibility tree.
-- Focus uses an intentionally high-contrast lime outline.
-- All content survives disabling animation.
+English is the root default and Portuguese (Brazil) is served at `/pt/`. Build output supplies localized document language/title/description/canonical/OG/Twitter metadata, absolute social image URLs, `hreflang` alternates, JSON-LD Person data, robots rules and a two-locale sitemap.

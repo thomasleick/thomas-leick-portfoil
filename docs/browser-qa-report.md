@@ -1,81 +1,56 @@
 # Rendered browser QA report
 
-Date: 2026-09-11  
-Scope: local portfolio only. No deployment, remote mutation, provider call or K-Libra repository change.
+Date: 2026-09-21
+Scope: local production preview only. No deployed URL, authenticated customer surface, provider, or remote mutation was used.
 
-## Execution boundary
+## Build and browser
 
-The requested Chrome/Playwright connection was attempted through the browser-control skill. Browser discovery returned an empty list (`[]`), and Chrome selection returned `Browser is not available: chrome`. Per the browser safety boundary, no alternate browser backend, session store, cookie inspection or authenticated-source bypass was used.
+The Vite production build was served with `npm run preview -- --host 0.0.0.0` at `http://127.0.0.1:4173/`. The build generated both `dist/index.html` and `dist/pt/index.html`. English is the root route; Portuguese is `/pt/`.
 
-This means the report contains real local preview and build evidence, but no rendered-browser certification. The correct status for browser-dependent checks is `BLOCKED`, not `PASS`.
-
-## Viewport matrix
-
-| Viewport | Rendered inspection | Overflow measurement | Status |
+| Viewport | English | Português (Brasil) | Horizontal overflow |
 | --- | --- | --- | --- |
-| 320×568 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 360×800 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 375×812 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 390×844 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 412×915 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 430×932 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 768×1024 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 1024×768 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 1280×800 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 1366×768 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 1440×900 | Not executed — Chrome unavailable | Not executed | BLOCKED |
-| 1920×1080 | Not executed — Chrome unavailable | Not executed | BLOCKED |
+| 1440×900 | Rendered | Rendered | None |
+| 1280×800 | Rendered | Rendered | None |
+| 768×1024 | Rendered | Rendered | None |
+| 390×844 | Rendered | Rendered | None |
 
-## Keyboard and navigation
+For each locale/viewport, `document.documentElement.scrollWidth` stayed within `window.innerWidth`; case cards fit the content width and all stack labels fit their own boxes. The portrait loaded. Cases stack into one column below 600px and use the split editorial layout at 768px and above. The 768px and 390px layouts use compact navigation; desktop navigation is shown at 1280px and above.
 
-- Cmd/Ctrl+K: `UNKNOWN` — source includes a native dialog, but no runtime key event could be exercised.
-- Escape, focus transfer and palette activation: `UNKNOWN`.
-- Mobile menu open/close/focus return: `UNKNOWN`.
-- Anchor and external links: `UNKNOWN` at runtime; source hrefs are present and target links use `rel="noreferrer"`.
+## Functional and keyboard checks
 
-## Reduced motion
+- Language switch: EN → PT and PT → EN changed the URL while preserving `#work`; the document language, title, canonical URL and Open Graph URL changed to match the selected locale.
+- Mobile navigation: dialog opens from the menu button. Following the Contact anchor closes it, updates the hash and moves focus to `contact-title`.
+- Command palette: Ctrl+K opens the labeled native dialog and focuses its search input. ArrowDown moves to a result; Escape closes the dialog and restores focus to the prior section heading.
+- Skip link: the first Tab reveals “Pular para o conteúdo”; Enter moves focus to `main#main-content` and updates the hash.
+- Reduced motion: `prefers-reduced-motion: reduce` reduces computed animation duration to `0.00001s` and keeps reveal content visible.
+- Accessibility snapshot: one H1, named page regions, labeled dialogs/navigation, descriptive portrait text and the skip link were present.
+- Console: 0 errors and 0 warnings. No broken image was observed.
+- External links were inspected in source and the rendered tree; destination sites were not opened.
 
-`UNKNOWN` at runtime because `prefers-reduced-motion: reduce` could not be emulated in a browser. Static implementation evidence remains: `useReveal` exits when the media query matches, and the CSS media query removes animation/transition duration and exposes pending content.
+## Contrast spot checks
 
-## Console, network and accessibility
+Rendered text contrast was measured against its composited background. Examples: muted metadata on graphite 5.77:1, case stack labels on graphite 15.22:1, contact labels on paper 5.33:1, and footer text on paper 4.56:1. These spot checks address the previously low-contrast metadata; they are not a full automated WCAG audit.
 
-- Console errors: `UNKNOWN` — no browser page was available.
-- Network request audit: `UNKNOWN` — no browser page was available. Local preview HTTP checks returned 200 for `/`, `/profile.avif` and the built CSS asset.
-- Accessibility tree: `UNKNOWN` — no browser page was available. Source includes one H1, semantic main/footer/section landmarks, native dialogs, labeled portrait/visuals, decorative SVG hiding, skip link and visible focus styling.
-- Lighthouse: `NOT_RUN` — browser capability unavailable.
+## SEO spot checks
 
-## Fix record
+- Root reports `lang=en`, its own canonical and absolute English Open Graph/Twitter image URLs.
+- `/pt/` reports `lang=pt-BR`, a Portuguese title/description, its own canonical and absolute Portuguese Open Graph/Twitter image URLs.
+- Both routes carry `en`, `pt-BR` and `x-default` alternate links. The build output includes `robots.txt` and `sitemap.xml`.
+- JSON-LD remains a Person entity with existing public profile URLs. No organization, award, publication or credential claims were added.
 
-### BEFORE_FIX
+## Limits
 
-- Hero had a portrait placeholder and no CV-derived experience context.
-- Supplied `profile.png` was a 1.5 MB deployable PNG.
-- Asset documentation still described the portrait as unavailable.
+This is local browser evidence, not production behavior. Lighthouse and deployed Core Web Vitals were not run. A full-page screenshot was used for a visual pass; offscreen reveal elements are intentionally activated by scrolling, so the screenshot alone is not treated as evidence that those sections are hidden during normal use.
 
-### FIX_APPLIED
+The production build emits a 269.65 KB JavaScript bundle (83.63 KB gzip) and 37.58 KB CSS (8.03 KB gzip). These are build artifact sizes, not page-load timing or Core Web Vitals. No dependency was added for the case diagrams or language model.
 
-- Added the supplied portrait to the hero with `picture`, AVIF/WebP sources, explicit `720×912` dimensions, `fetchPriority="high"`, grayscale treatment and the existing technical frame.
-- Removed the lime orbit marker that overlapped the forehead; the orbit line remains as the structural motif without placing a colored point over the face.
-- Generated `profile.avif` (35 KB) and `profile.webp` (39 KB); moved the original to `source-assets/profile-original.png` so the unoptimized file is not deployed.
-- Added a CV-sourced professional journey from Galápagos Capital, Thomson Reuters, Sparta, Tivita, Buffet GulaMania and Elis Brasil.
-- Updated README, content audit and asset manifest with the new evidence and rights boundary.
+## Gate results
 
-### AFTER_FIX
-
-- TypeScript, ESLint and production build pass after the changes.
-- Production preview serves `/` and optimized portrait/CSS assets successfully over localhost.
-- Rendered-browser, focus, overflow, reduced-motion and Lighthouse checks remain blocked pending browser availability.
-
-## Evidence and certification status
-
-| Evidence type | Result |
+| Check | Result |
 | --- | --- |
-| Source/static inspection | PASS |
 | `npm run typecheck` | PASS |
 | `npm run lint` | PASS |
 | `npm run build` | PASS |
-| Vite production preview HTTP smoke | PASS |
-| Rendered browser | BLOCKED |
-| Lighthouse | NOT_RUN |
-
-Unresolved: connect a Chrome/Playwright browser session and repeat this matrix, capture screenshots under `docs/qa/screenshots/`, record actual `scrollWidth/clientWidth`, exercise keyboard and reduced motion, and run Lighthouse against the production preview.
+| `npm test` | NOT AVAILABLE — no test script is defined |
+| Local Playwright browser QA | PASS for listed checks |
+| Lighthouse / deployed performance | NOT RUN |
