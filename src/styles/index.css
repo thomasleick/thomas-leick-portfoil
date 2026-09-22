@@ -168,6 +168,7 @@ dialog::backdrop { background: rgba(4, 5, 8, .76); backdrop-filter: blur(8px); }
 .domain-grid span { display: grid; min-height: 3.1rem; place-items: center; padding: .45rem; color: var(--paper); border: 1px solid var(--line-strong); background: rgba(255,255,255,.025); font-size: .78rem; line-height: 1.35; text-align: center; overflow-wrap: anywhere; }
 .domain-grid span:nth-child(3n + 2) { border-color: rgba(196,176,255,.38); }
 .domain-grid span:nth-child(3n) { color: var(--violet-bright); }
+.domain-grid span:nth-child(4) { transform: translateY(-3mm); }
 .ai-assistance-layer { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); align-items: center; gap: .8rem; padding: .85rem 0; border-top: 1px dashed rgba(200,255,98,.5); border-bottom: 1px solid var(--line); }
 .ai-assistance-mark { display: grid; width: 2.1rem; height: 2.1rem; place-items: center; color: var(--ink); background: var(--lime); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; font-weight: 800; }
 .ai-assistance-layer strong { color: var(--lime); font-size: .84rem; }
