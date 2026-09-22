@@ -1,89 +1,33 @@
 import { ArrowUpRight } from '../components/Icons'
-import { ProjectVisual } from '../components/ProjectVisual'
 import { SectionHeading } from '../components/SectionHeading'
-import { content, type Locale, type ProjectCase } from '../data/portfolio'
+import { projects } from '../data/portfolio'
+import type { CSSProperties } from 'react'
 
-function CaseStudy({ project }: { project: ProjectCase }) {
-  return (
-    <article className={'project-card project-' + project.id} id={project.id} tabIndex={-1} aria-labelledby={project.id + '-title'} data-reveal>
-      <div className="project-card-main">
-        <div className="project-card-top">
-          <span className="project-number">{project.number}</span>
-          <p>{project.category}</p>
-        </div>
-        <h3 id={project.id + '-title'} tabIndex={-1}>{project.title}</h3>
-        <p className="project-lead">{project.summary}</p>
-
-        <div className="case-facts">
-          <section className="case-fact">
-            <h4>{project.challengeLabel}</h4>
-            <p>{project.challenge}</p>
-          </section>
-          <section className="case-fact case-ownership">
-            <h4>{project.roleLabel}</h4>
-            <p>{project.role}</p>
-          </section>
-        </div>
-
-        <section className="case-decisions">
-          <h4>{project.decisionsLabel}</h4>
-          <ol>
-            {project.decisions.map((decision, index) => (
-              <li key={decision.title}>
-                <span className="decision-index">{String(index + 1).padStart(2, '0')}</span>
-                <div><strong>{decision.title}</strong><p>{decision.detail}</p></div>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="case-evidence">
-          <h4>{project.evidenceLabel}</h4>
-          <p>{project.evidence}</p>
-        </section>
-
-        <div className="case-stack">
-          <h4>{project.stackLabel}</h4>
-          <ul aria-label={project.stackLabel}>
-            {project.stack.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-        </div>
-
-        {project.links.length > 0 ? (
-          <div className="project-links">
-            {project.links.map((link) => (
-              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
-                {link.label}<ArrowUpRight size={16} />
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-            ))}
-          </div>
-        ) : null}
-      </div>
-      <div className="project-visual">
-        <ProjectVisual visual={project.visual} projectId={project.id} />
-      </div>
-    </article>
-  )
+function ArchitectureMap() {
+  const nodes = ['sales', 'inventory', 'financial', 'fiscal', 'payments', 'customers', 'returns', 'shipping', 'AI']
+  return <div className="architecture-map" role="img" aria-label="K-Libra private ERP domain map">
+    <span className="map-core">K</span>
+    <svg viewBox="0 0 400 300" aria-hidden="true"><path d="M200 150 65 62M200 150 195 28M200 150 336 60M200 150 64 151M200 150 336 150M200 150 65 240M200 150 195 272M200 150 336 240" /></svg>
+    {nodes.map((node, index) => <span key={node} className={`map-node node-${index}`}>{node}</span>)}
+  </div>
 }
 
-export function Work({ locale }: { locale: Locale }) {
-  const copy = content[locale].work
-
-  return (
-    <section id="work" className="section work-section" aria-labelledby="work-title">
-      <SectionHeading id="work-title" number="01" eyebrow={copy.eyebrow} title={copy.title} copy={copy.introduction} />
-      <div className="trust-questions" aria-label={copy.questionsLabel}>
-        {copy.questions.map((item, index) => (
-          <a className="trust-question" href={'#' + item.project.toLowerCase().replace(' ', '-')} key={item.project}>
-            <span>{String(index + 1).padStart(2, '0')} / {item.project}</span>
-            <strong>{item.question}</strong>
-          </a>
-        ))}
-      </div>
-      <div className="project-list">
-        {copy.cases.map((project) => <CaseStudy key={project.id} project={project} />)}
-      </div>
-    </section>
-  )
+export function Work() {
+  return <section id="work" className="section work-section" aria-labelledby="work-title">
+    <SectionHeading id="work-title" number="01" eyebrow="Selected work" title="Products with operational weight." copy="The work here is selected for the boundaries it has to hold—not for a visual catalogue of tools." />
+    <div className="project-list">
+      {projects.map((project, index) => <article className={`project-card project-${project.id}`} key={project.id} data-reveal>
+        <div className="project-card-main">
+          <div className="project-card-top"><span className="project-number">{project.label}</span><p>{project.eyebrow}</p></div>
+          <h3>{project.title}</h3><p className="project-lead">{project.description}</p><p className="project-detail">{project.detail}</p>
+          <div className="project-tags" aria-label={`${project.title} capabilities`}>{project.capabilities.map((item) => <span key={item}>{item}</span>)}</div>
+          <div className="project-links">{project.links.map((link) => <a key={link.href} href={link.href} target="_blank" rel="noreferrer">{link.label}<ArrowUpRight size={16} /></a>)}</div>
+        </div>
+        <div className="project-visual">
+          {index === 0 ? <ArchitectureMap /> : <div className="audio-visual" role="img" aria-label="Vocal Flow signal composition"><div className="audio-header"><span>TRACK_STUDIO</span><i>SYNCED</i></div><div className="audio-wave">{Array.from({ length: 32 }, (_, waveIndex) => <i key={waveIndex} style={{ '--wave': `${25 + ((waveIndex * 37) % 65)}%` } as CSSProperties} />)}</div><div className="audio-timeline"><span /><span /><span /><span /><b /></div><div className="audio-legend"><span>private stems</span><span>local pitch</span><span>aligned MIDI</span></div></div>}
+          <div className="visual-caption"><span>system view</span><span>{project.stack.join(' · ')}</span></div>
+        </div>
+      </article>)}
+    </div>
+  </section>
 }
