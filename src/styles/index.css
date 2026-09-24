@@ -289,15 +289,15 @@ dialog::backdrop { background: rgba(4, 5, 8, .76); backdrop-filter: blur(8px); }
 .network-core, .network-node { position: absolute; z-index: 1; display: grid; place-items: center; min-width: 2.8rem; min-height: 1.65rem; padding: .3rem .4rem; color: var(--paper); border: 1px solid var(--line-strong); background: rgba(23,24,36,.94); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .58rem; line-height: 1.25; text-align: center; text-transform: uppercase; overflow-wrap: anywhere; }
 .network-core { top: calc(50% - .95rem); left: calc(50% - 1.5rem); min-width: 3rem; min-height: 1.9rem; color: #14151c; border-color: var(--violet-bright); background: var(--violet-bright); font-size: .82rem; font-weight: 800; }
 .network-node { max-width: 6rem; }
-.domain-network-map .network-node-0 { top: 8%; left: 4%; }
-.domain-network-map .network-node-1 { top: 2%; left: calc(50% - 2rem); }
-.domain-network-map .network-node-2 { top: 8%; right: 4%; }
-.domain-network-map .network-node-3 { top: calc(50% - .85rem); left: 0; transform: translateY(-3mm); }
-.domain-network-map .network-node-4 { top: calc(50% - .85rem); right: 0; }
-.domain-network-map .network-node-5 { bottom: 10%; left: 4%; }
-.domain-network-map .network-node-6 { bottom: 2%; left: calc(50% - 2rem); }
-.domain-network-map .network-node-7 { right: 4%; bottom: 10%; }
-.domain-network-map .network-node-8 { top: 22%; right: 25%; color: var(--lime); border-color: rgba(200,255,98,.35); }
+.domains-network-map .network-node-0 { top: 8%; left: 4%; }
+.domains-network-map .network-node-1 { top: 2%; left: calc(50% - 2rem); }
+.domains-network-map .network-node-2 { top: 8%; right: 4%; }
+.domains-network-map .network-node-3 { top: calc(50% - .85rem); left: 0; transform: translateY(-3mm); }
+.domains-network-map .network-node-4 { top: calc(50% - .85rem); right: 0; }
+.domains-network-map .network-node-5 { bottom: 10%; left: 4%; }
+.domains-network-map .network-node-6 { bottom: 2%; left: calc(50% - 2rem); }
+.domains-network-map .network-node-7 { right: 4%; bottom: 10%; }
+.domains-network-map .network-node-8 { top: 22%; right: 25%; color: var(--lime); border-color: rgba(200,255,98,.35); }
 .agent-network-map .network-node-0 { top: 10%; left: 4%; }
 .agent-network-map .network-node-1 { top: 2%; left: calc(50% - 2rem); }
 .agent-network-map .network-node-2 { top: 10%; right: 4%; }
