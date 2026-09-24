@@ -276,8 +276,10 @@ dialog::backdrop { background: rgba(4, 5, 8, .76); backdrop-filter: blur(8px); }
 .network-map {
   position: relative;
   display: block;
-  flex: 1;
-  min-height: 20rem;
+  flex: 0 0 clamp(20rem, 30vw, 30rem);
+  height: clamp(20rem, 30vw, 30rem);
+  min-height: 0;
+  max-height: 30rem;
   width: 100%;
   margin: auto;
   overflow: hidden;
@@ -285,7 +287,7 @@ dialog::backdrop { background: rgba(4, 5, 8, .76); backdrop-filter: blur(8px); }
 }
 .network-map svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .network-map path { fill: none; stroke: var(--violet); stroke-width: 1; stroke-dasharray: 4 5; opacity: .48; marker-end: inherit; animation: pulse-network 4.5s linear infinite; }
-.network-map marker path { fill: currentColor; stroke: none; }
+.network-map marker path { fill: var(--violet-bright); stroke: none; opacity: 1; }
 .network-core, .network-node { position: absolute; z-index: 1; display: grid; place-items: center; min-width: 2.8rem; min-height: 1.65rem; padding: .3rem .4rem; color: var(--paper); border: 1px solid var(--line-strong); background: rgba(23,24,36,.94); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .58rem; line-height: 1.25; text-align: center; text-transform: uppercase; overflow-wrap: anywhere; }
 .network-core { top: calc(50% - .95rem); left: calc(50% - 1.5rem); min-width: 3rem; min-height: 1.9rem; color: #14151c; border-color: var(--violet-bright); background: var(--violet-bright); font-size: .82rem; font-weight: 800; }
 .network-node { max-width: 6rem; }
@@ -307,7 +309,7 @@ dialog::backdrop { background: rgba(4, 5, 8, .76); backdrop-filter: blur(8px); }
 .agent-network-map .network-node-5 { color: var(--lime); border-color: rgba(200,255,98,.35); }
 
 @media (max-width: 680px) {
-  .network-map { min-height: 18rem; flex: 0 0 18rem; }
+  .network-map { height: 18rem; min-height: 18rem; flex: 0 0 18rem; }
   .network-node { min-width: 2.5rem; max-width: 5rem; padding: .25rem .3rem; font-size: .54rem; }
   .network-core { font-size: .72rem; }
 }
