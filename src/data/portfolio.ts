@@ -240,7 +240,7 @@ const english: PageCopy = {
         stack: ['React', 'Next.js', 'NestJS', 'Fastify', 'TypeScript', 'Supabase / PostgreSQL'],
         links: [
           { label: 'Institutional product site', href: 'https://k-libra-system-site.vercel.app/#conteudo' },
-          { label: 'Customer portal · PX3 clients', href: 'https://k-libra-system-web.vercel.app/login' },
+          { label: 'Customer portal · PX3 clients', href: 'https://k-libra-system.vercel.app/login' },
         ],
         visual: {
           type: 'domains',
@@ -459,7 +459,7 @@ const portuguese: PageCopy = {
         stack: ['React', 'Next.js', 'NestJS', 'Fastify', 'TypeScript', 'Supabase / PostgreSQL'],
         links: [
           { label: 'Site institucional do produto', href: 'https://k-libra-system-site.vercel.app/#conteudo' },
-          { label: 'Portal de clientes · PX3', href: 'https://k-libra-system-web.vercel.app/login' },
+          { label: 'Portal de clientes · PX3', href: 'https://k-libra-system.vercel.app/login' },
         ],
         visual: {
           type: 'domains',
