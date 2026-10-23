@@ -24,7 +24,7 @@ export function CommandPalette({ open, locale, onOpenChange }: CommandPalettePro
   const [focusAfterCloseId, setFocusAfterCloseId] = useState<string | null>(null)
   const normalizedQuery = query.trim().toLocaleLowerCase(locale === 'pt' ? 'pt-BR' : 'en')
   const actions: readonly Action[] = [
-    ...copy.navigation.map((item) => ({ label: item.label, detail: copy.palette.sectionDetail, href: item.href, destination: 'section' as const })),
+    ...copy.palette.destinations.map((item) => ({ label: item.label, detail: copy.palette.sectionDetail, href: item.href, destination: 'section' as const })),
     ...copy.work.cases.map((project) => ({ label: project.title, detail: copy.palette.caseDetail, href: '#' + project.id, destination: 'section' as const })),
     { label: 'GitHub', detail: copy.palette.github, href: profile.links.github, destination: 'new-tab' },
     { label: 'LinkedIn', detail: copy.palette.linkedin, href: profile.links.linkedin, destination: 'new-tab' },

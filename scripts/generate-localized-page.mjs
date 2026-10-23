@@ -3,12 +3,12 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)))
-const origin = 'https://thomas-leick-portfoil.vercel.app'
+const origin = 'https://thomasleick.vercel.app'
 const outputFile = join(root, 'dist', 'index.html')
 const portuguese = {
-  title: 'Thomas Andrioli Leick — Engenharia de Sistemas',
-  description: 'Engenharia de sistemas, pesquisa aplicada em áudio e avaliação governada de agentes por Thomas Andrioli Leick.',
-  image: origin + '/social-card-pt.svg',
+  title: 'Leick & S. Software — Engenharia para a complexidade',
+  description: 'Leick & S. Software — engenharia de software, integração de sistemas, automação inteligente e IA aplicada. Por Thomas Leick.',
+  image: origin + '/social-card.png',
   canonical: origin + '/pt/',
 }
 
@@ -38,6 +38,7 @@ page = replaceMeta(page, 'og-url', portuguese.canonical)
 page = replaceMeta(page, 'og-locale', 'pt_BR')
 page = replaceMeta(page, 'og-locale-alternate', 'en_US')
 page = replaceMeta(page, 'og-image', portuguese.image)
+page = page.replace('content="image/svg+xml"', 'content="image/png"')
 page = replaceMeta(page, 'twitter-title', portuguese.title)
 page = replaceMeta(page, 'twitter-description', portuguese.description)
 page = replaceMeta(page, 'twitter-image', portuguese.image)

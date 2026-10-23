@@ -144,6 +144,7 @@ type PageCopy = {
   }
   palette: {
     title: string
+    destinations: readonly NavigationItem[]
     trigger: string
     triggerLabel: string
     searchLabel: string
@@ -180,13 +181,12 @@ const english: PageCopy = {
     title: 'Leick & S. Software — Engineering the Answer',
     description: 'Leick & S. Software — software engineering, systems integration, intelligent automation and applied AI. Founded by Thomas Leick.',
     ogLocale: 'en_US',
-    imagePath: '/social-card.svg',
+    imagePath: '/social-card.png',
   },
   navigation: [
+    { label: 'Solutions', href: '#engineering' },
     { label: 'Work', href: '#work' },
-    { label: 'Engineering', href: '#engineering' },
-    { label: 'Career', href: '#career' },
-    { label: 'Outside runtime', href: '#outside-runtime' },
+    { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
   ],
   menuTitle: 'Portfolio navigation',
@@ -197,8 +197,8 @@ const english: PageCopy = {
     emphasis: 'the puzzle.',
     lineThree: 'Engineering is the answer.',
     introduction: 'We design, integrate and automate intelligent software systems. Founded by Thomas Leick, Leick & S. Software turns complex challenges into reliable engineering.',
-    workCta: 'Explore selected work',
-    contactCta: 'Start a conversation',
+    workCta: 'Explore projects',
+    contactCta: 'Discuss a project',
     location: 'São Paulo, Brazil',
     scrollHint: 'Scroll to explore',
     principleLabel: 'Working principle',
@@ -322,17 +322,17 @@ const english: PageCopy = {
     ],
   },
   engineering: {
-    eyebrow: 'Engineering responsibility',
-    title: 'Technology follows the boundary.',
-    introduction: 'The stack matters when it carries a real responsibility. These are the concerns surfaced across the work.',
+    eyebrow: 'Solutions / systems engineering',
+    title: 'Engineering built around real constraints.',
+    introduction: 'Software, systems and automation shaped around the responsibilities and evidence each problem requires.',
     capabilities: [
-      { index: 'A', title: 'Authority and transitions', text: 'Keep business decisions, tenant context and durable state changes at the boundary that owns them.', tags: ['domain ownership', 'transactions', 'access scope'] },
-      { index: 'B', title: 'Interfaces to operations', text: 'Make state, exceptions and the next valid action understandable to the person doing the work.', tags: ['product design', 'frontend', 'workflow'] },
-      { index: 'C', title: 'Signals into decisions', text: 'Separate raw measurements from useful events, expose uncertainty and evaluate before promotion.', tags: ['audio', 'MIR', 'evaluation'] },
-      { index: 'D', title: 'Agents under governance', text: 'Constrain execution, preserve attempts and require evidence before treating an outcome as successful.', tags: ['agent runtime', 'sandbox', 'evidence'] },
+      { index: '01', title: 'Software engineering', text: 'Software for products and processes, grounded in clear requirements, constraints and verifiable outcomes.', tags: ['product software', 'engineering', 'delivery'] },
+      { index: '02', title: 'Systems integration and architecture', text: 'Architecture and integration that respect responsibilities, data and boundaries between systems.', tags: ['architecture', 'integration', 'data boundaries'] },
+      { index: '03', title: 'Automation and processes', text: 'Automation for repeatable workflows, with explicit states, exceptions and traceability.', tags: ['workflows', 'automation', 'operations'] },
+      { index: '04', title: 'Applied artificial intelligence', text: 'AI applied to defined contexts, with limits and validation suited to the problem.', tags: ['applied AI', 'evaluation', 'human review'] },
     ],
-    principle: 'A system should make the next valid action visible—and make its limits visible too.',
-    principleLabel: 'Working principle / 01',
+    principle: 'Design. Integrate. Automate. Evolve.',
+    principleLabel: 'Leick & S. Software',
   },
   career: {
     eyebrow: 'Career',
@@ -376,6 +376,11 @@ const english: PageCopy = {
   },
   palette: {
     title: 'Navigate this portfolio',
+    destinations: [
+      { label: 'Solutions', href: '#engineering' }, { label: 'Work', href: '#work' },
+      { label: 'About', href: '#about' }, { label: 'Career', href: '#career' },
+      { label: 'Outside the runtime', href: '#outside-runtime' }, { label: 'Contact', href: '#contact' },
+    ],
     trigger: 'Navigate',
     triggerLabel: 'Open navigation command palette',
     searchLabel: 'Find a destination',
@@ -399,13 +404,12 @@ const portuguese: PageCopy = {
     title: 'Leick & S. Software — Engenharia para a complexidade',
     description: 'Leick & S. Software — engenharia de software, integração de sistemas, automação inteligente e IA aplicada. Por Thomas Leick.',
     ogLocale: 'pt_BR',
-    imagePath: '/social-card-pt.svg',
+    imagePath: '/social-card.png',
   },
   navigation: [
-    { label: 'Trabalhos', href: '#work' },
-    { label: 'Engenharia', href: '#engineering' },
-    { label: 'Carreira', href: '#career' },
-    { label: 'Fora do runtime', href: '#outside-runtime' },
+    { label: 'Soluções', href: '#engineering' },
+    { label: 'Projetos', href: '#work' },
+    { label: 'Sobre', href: '#about' },
     { label: 'Contato', href: '#contact' },
   ],
   menuTitle: 'Navegação do portfólio',
@@ -416,8 +420,8 @@ const portuguese: PageCopy = {
     emphasis: 'é o desafio.',
     lineThree: 'Engenharia é a resposta.',
     introduction: 'Projetamos, integramos e automatizamos sistemas inteligentes. Fundada por Thomas Leick, a Leick & S. Software transforma desafios complexos em engenharia confiável.',
-    workCta: 'Conheça os projetos',
-    contactCta: 'Vamos conversar',
+    workCta: 'Conhecer projetos',
+    contactCta: 'Conversar sobre um projeto',
     location: 'São Paulo, Brasil',
     scrollHint: 'Role para explorar',
     principleLabel: 'Princípio de trabalho',
@@ -541,17 +545,17 @@ const portuguese: PageCopy = {
     ],
   },
   engineering: {
-    eyebrow: 'Responsabilidade de engenharia',
-    title: 'A tecnologia segue a fronteira.',
-    introduction: 'A stack importa quando sustenta uma responsabilidade real. Estes são os desafios que aparecem nos projetos.',
+    eyebrow: 'Soluções / engenharia de sistemas',
+    title: 'Engenharia para problemas reais.',
+    introduction: 'Software, sistemas e automação moldados pelas responsabilidades e evidências que cada problema exige.',
     capabilities: [
-      { index: 'A', title: 'Autoridade e transições', text: 'Manter decisões de negócio, escopo de empresa e mudanças persistidas na fronteira que é responsável por eles.', tags: ['domínios', 'transações', 'acesso'] },
-      { index: 'B', title: 'Interfaces para operação', text: 'Tornar estados, exceções e a próxima ação válida compreensíveis para quem executa o trabalho.', tags: ['produto', 'frontend', 'fluxos'] },
-      { index: 'C', title: 'Sinais que orientam decisões', text: 'Separar medidas brutas de eventos úteis, mostrar incerteza e avaliar antes de promover.', tags: ['áudio', 'MIR', 'avaliação'] },
-      { index: 'D', title: 'Agentes sob governança', text: 'Limitar execução, preservar tentativas e exigir evidência antes de considerar um resultado bem-sucedido.', tags: ['runtime agêntico', 'sandbox', 'evidências'] },
+      { index: '01', title: 'Engenharia de software', text: 'Software para produtos e processos, com requisitos, limites e resultados verificáveis.', tags: ['software de produto', 'engenharia', 'entrega'] },
+      { index: '02', title: 'Integração e arquitetura de sistemas', text: 'Arquitetura e integração que respeitam responsabilidades, dados e fronteiras entre sistemas.', tags: ['arquitetura', 'integração', 'fronteiras de dados'] },
+      { index: '03', title: 'Automação e processos', text: 'Automação de fluxos repetitivos, com estados, exceções e rastreabilidade explícitos.', tags: ['fluxos', 'automação', 'operações'] },
+      { index: '04', title: 'Inteligência artificial aplicada', text: 'IA aplicada a contextos definidos, com limites e validação adequados ao problema.', tags: ['IA aplicada', 'avaliação', 'revisão humana'] },
     ],
-    principle: 'Um sistema deve mostrar a próxima ação válida — e também deixar claros os seus limites.',
-    principleLabel: 'Princípio de trabalho / 01',
+    principle: 'Projetar. Integrar. Automatizar. Evoluir.',
+    principleLabel: 'Leick & S. Software',
   },
   career: {
     eyebrow: 'Carreira',
@@ -595,6 +599,11 @@ const portuguese: PageCopy = {
   },
   palette: {
     title: 'Navegue pelo portfólio',
+    destinations: [
+      { label: 'Soluções', href: '#engineering' }, { label: 'Projetos', href: '#work' },
+      { label: 'Sobre', href: '#about' }, { label: 'Carreira', href: '#career' },
+      { label: 'Fora do runtime', href: '#outside-runtime' }, { label: 'Contato', href: '#contact' },
+    ],
     trigger: 'Navegar',
     triggerLabel: 'Abrir paleta de navegação',
     searchLabel: 'Buscar destino',

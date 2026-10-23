@@ -6,7 +6,7 @@ export function Career({ locale }: { locale: Locale }) {
 
   return (
     <section id="career" className="section career-section" aria-labelledby="career-title">
-      <SectionHeading id="career-title" number="03" eyebrow={copy.eyebrow} title={copy.title} copy={copy.introduction} />
+      <SectionHeading id="career-title" number="04" eyebrow={copy.eyebrow} title={copy.title} copy={copy.introduction} />
       <div className="journey-list" data-reveal>
         {copy.experience.map((item) => (
           <article key={item.company + item.period}>

@@ -7,7 +7,7 @@ export function Contact({ locale }: { locale: Locale }) {
   return (
     <section id="contact" className="contact-section" aria-labelledby="contact-title">
       <div className="contact-grid" data-reveal>
-        <div><p className="eyebrow">{copy.eyebrow} / 05</p><h2 id="contact-title" tabIndex={-1}>{copy.titleFirst}<br /><em>{copy.titleSecond}</em></h2></div>
+        <div><p className="eyebrow">{copy.eyebrow} / 06</p><h2 id="contact-title" tabIndex={-1}>{copy.titleFirst}<br /><em>{copy.titleSecond}</em></h2></div>
         <p>{copy.introduction}</p>
       </div>
       <div className="contact-links" data-reveal>

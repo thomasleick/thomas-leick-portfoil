@@ -7,6 +7,8 @@ import { Career } from './sections/Career'
 import { Contact } from './sections/Contact'
 import { Engineering } from './sections/Engineering'
 import { Hero } from './sections/Hero'
+import { Manifesto } from './sections/Manifesto'
+import { Founder } from './sections/Founder'
 import { OutsideRuntime } from './sections/OutsideRuntime'
 import { Work } from './sections/Work'
 
@@ -73,8 +75,10 @@ export default function App() {
       <Header locale={locale} onCommand={() => setPaletteOpen(true)} />
       <main id="main-content" ref={mainRef} tabIndex={-1}>
         <Hero locale={locale} />
+        <Manifesto locale={locale} />
         <Work locale={locale} />
         <Engineering locale={locale} />
+        <Founder locale={locale} />
         <Career locale={locale} />
         <OutsideRuntime locale={locale} />
         <Contact locale={locale} />

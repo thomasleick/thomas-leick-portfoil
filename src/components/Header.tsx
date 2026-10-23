@@ -78,7 +78,7 @@ export function Header({ locale, onCommand }: HeaderProps) {
 
   return (
     <header className="site-header">
-      <a className="monogram brand-lockup" href="#top" aria-label="Leick & S. Software — início"><span className="brand-symbol" aria-hidden="true">LS</span><span className="brand-wordmark">Leick <b>&amp; S.</b><small>SOFTWARE</small></span></a>
+      <a className="brand-lockup" href="#top" aria-label={locale === 'en' ? 'Leick & S. Software — home' : 'Leick & S. Software — início'}><img className="brand-symbol" src="/assets/brand/leick-logo-mark.webp" alt="" width="52" height="52" /><span className="brand-wordmark">Leick <b>&amp; S.</b><small>SOFTWARE</small></span></a>
       <nav className="desktop-nav" aria-label={locale === 'en' ? 'Primary navigation' : 'Navegação principal'}>
         {copy.navigation.map((item) => {
           const sectionId = item.href.slice(1)
@@ -97,7 +97,7 @@ export function Header({ locale, onCommand }: HeaderProps) {
       <dialog ref={dialogRef} className="mobile-menu" aria-labelledby="mobile-menu-title" onClose={() => setMenuOpen(false)}>
         <div className="mobile-menu-top">
           <h2 className="sr-only" id="mobile-menu-title">{copy.menuTitle}</h2>
-          <span className="eyebrow">Index / 01—05</span>
+          <span className="eyebrow">{locale === 'en' ? 'Index / 01—04' : 'Índice / 01—04'}</span>
           <button type="button" className="icon-button" onClick={closeMenu} aria-label={locale === 'en' ? 'Close navigation menu' : 'Fechar menu de navegação'}><Close size={21} /></button>
         </div>
         <nav aria-label={locale === 'en' ? 'Mobile navigation' : 'Navegação mobile'}>

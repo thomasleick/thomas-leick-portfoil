@@ -7,7 +7,7 @@ export function OutsideRuntime({ locale }: { locale: Locale }) {
 
   return (
     <section id="outside-runtime" className="section outside-section" aria-labelledby="outside-runtime-title">
-      <SectionHeading id="outside-runtime-title" number="04" eyebrow={copy.eyebrow} title={copy.title} copy={copy.introduction} />
+      <SectionHeading id="outside-runtime-title" number="05" eyebrow={copy.eyebrow} title={copy.title} copy={copy.introduction} />
       <div className="outside-layout">
         <div className="personal-note" data-reveal>
           <span className="note-label">{copy.noteLabel}</span>
