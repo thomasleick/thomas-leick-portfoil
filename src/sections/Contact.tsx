@@ -16,7 +16,7 @@ export function Contact({ locale }: { locale: Locale }) {
         <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin size={19} /><span><small>{copy.profileLabel}</small>LinkedIn / Thomas Andrioli Leick</span><ArrowUpRight size={18} /></a>
       </div>
       <footer className="site-footer">
-        <span>© {new Date().getFullYear()} Thomas Andrioli Leick</span>
+        <span>© {new Date().getFullYear()} Leick &amp; S. Software · Thomas Leick</span>
         <span>{copy.footerNote}</span>
         <span>{copy.fuel}</span>
       </footer>

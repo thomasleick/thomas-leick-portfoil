@@ -162,7 +162,7 @@ type PageCopy = {
   }
 }
 
-export const siteOrigin = 'https://thomas-leick-portfoil.vercel.app'
+export const siteOrigin = 'https://thomasleick.vercel.app'
 
 export const profile = {
   name: 'Thomas Andrioli Leick',
@@ -177,8 +177,8 @@ export const profile = {
 
 const english: PageCopy = {
   metadata: {
-    title: 'Thomas Andrioli Leick — Systems Builder',
-    description: 'Systems engineering, applied audio research, and governed agent evaluation by Thomas Andrioli Leick.',
+    title: 'Leick & S. Software — Engineering the Answer',
+    description: 'Leick & S. Software — software engineering, systems integration, intelligent automation and applied AI. Founded by Thomas Leick.',
     ogLocale: 'en_US',
     imagePath: '/social-card.svg',
   },
@@ -192,23 +192,23 @@ const english: PageCopy = {
   menuTitle: 'Portfolio navigation',
   skipLink: 'Skip to content',
   hero: {
-    eyebrow: 'Product · systems · evidence',
-    lineOne: 'Engineering the',
-    emphasis: 'structure',
-    lineThree: 'behind serious products.',
-    introduction: 'Thomas Andrioli Leick is a senior software engineer and systems builder. He works where product, infrastructure, data and business rules meet.',
+    eyebrow: 'LEICK & S. SOFTWARE / DIGITAL ENGINEERING',
+    lineOne: 'Complexity is',
+    emphasis: 'the puzzle.',
+    lineThree: 'Engineering is the answer.',
+    introduction: 'We design, integrate and automate intelligent software systems. Founded by Thomas Leick, Leick & S. Software turns complex challenges into reliable engineering.',
     workCta: 'Explore selected work',
     contactCta: 'Start a conversation',
     location: 'São Paulo, Brazil',
     scrollHint: 'Scroll to explore',
     principleLabel: 'Working principle',
-    principle: 'Complexity deserves an interface.',
+    principle: 'Design. Integrate. Automate. Evolve.',
     principleNote: 'model / verify / refine',
     portraitLabel: 'Portrait of Thomas Andrioli Leick',
   },
   work: {
     eyebrow: 'Selected work',
-    title: 'Systems under real constraints.',
+    title: 'Engineering in the real world.',
     introduction: 'Three different systems ask a related question: what makes an outcome trustworthy?',
     questionsLabel: 'Three questions of trust',
     questions: [
@@ -396,8 +396,8 @@ const english: PageCopy = {
 
 const portuguese: PageCopy = {
   metadata: {
-    title: 'Thomas Andrioli Leick — Engenharia de Sistemas',
-    description: 'Engenharia de sistemas, pesquisa aplicada em áudio e avaliação governada de agentes por Thomas Andrioli Leick.',
+    title: 'Leick & S. Software — Engenharia para a complexidade',
+    description: 'Leick & S. Software — engenharia de software, integração de sistemas, automação inteligente e IA aplicada. Por Thomas Leick.',
     ogLocale: 'pt_BR',
     imagePath: '/social-card-pt.svg',
   },
@@ -411,23 +411,23 @@ const portuguese: PageCopy = {
   menuTitle: 'Navegação do portfólio',
   skipLink: 'Pular para o conteúdo',
   hero: {
-    eyebrow: 'Produto · sistemas · evidências',
-    lineOne: 'A estrutura por trás',
-    emphasis: 'de',
-    lineThree: 'produtos que importam.',
-    introduction: 'Thomas Andrioli Leick é engenheiro de software sênior e construtor de sistemas. Trabalha onde produto, infraestrutura, dados e regras de negócio se encontram.',
+    eyebrow: 'LEICK & S. SOFTWARE / ENGENHARIA DIGITAL',
+    lineOne: 'A complexidade',
+    emphasis: 'é o desafio.',
+    lineThree: 'Engenharia é a resposta.',
+    introduction: 'Projetamos, integramos e automatizamos sistemas inteligentes. Fundada por Thomas Leick, a Leick & S. Software transforma desafios complexos em engenharia confiável.',
     workCta: 'Conheça os projetos',
     contactCta: 'Vamos conversar',
     location: 'São Paulo, Brasil',
     scrollHint: 'Role para explorar',
     principleLabel: 'Princípio de trabalho',
-    principle: 'Complexidade merece uma interface à altura.',
+    principle: 'Projetar. Integrar. Automatizar. Evoluir.',
     principleNote: 'modelar / verificar / refinar',
     portraitLabel: 'Retrato de Thomas Andrioli Leick',
   },
   work: {
     eyebrow: 'Trabalhos selecionados',
-    title: 'Sistemas sob restrições reais.',
+    title: 'Engenharia no mundo real.',
     introduction: 'Três sistemas diferentes partem de uma pergunta em comum: o que torna um resultado confiável?',
     questionsLabel: 'Três perguntas sobre confiança',
     questions: [

@@ -316,3 +316,47 @@ dialog::backdrop { background: rgba(4, 5, 8, .76); backdrop-filter: blur(8px); }
 
 /* Preserve the previously approved Returns position in the legacy map. */
 .node-6 { bottom: 3mm; }
+
+
+/* Leick & S. Software · brand layer */
+:root {
+  --ink:#070c1a; --ink-raised:#0d1426; --ink-soft:#111c32;
+  --paper:#f3f7ff; --muted:#a1b2cc; --faint:#8397b3;
+  --line:rgba(127,172,238,.16); --line-strong:rgba(127,172,238,.32);
+  --violet:#4a9dff; --violet-bright:#dca6d5; --lime:#76caff;
+}
+body {background:#070c1a}
+.site-shell {background: radial-gradient(ellipse at 80% 8%,rgba(189,75,183,.11),transparent 32rem),radial-gradient(ellipse at 12% 18%,rgba(14,115,255,.12),transparent 39rem),#070c1a}
+.site-header {background:rgba(6,11,24,.84);box-shadow:0 5px 42px rgba(0,0,0,.18)}
+.brand-lockup {display:inline-flex;align-items:center;gap:.65rem;letter-spacing:0}
+.brand-symbol,.brand-mini-mark {display:grid;place-items:center;flex:none;font-family:Inter,system-ui,sans-serif;font-size:.9rem;font-weight:950;letter-spacing:-.17em;color:#d9eaff;background:linear-gradient(135deg,#0078fc 0%,#52c9ff 44%,#e6a3cf 75%,#db80d0 100%);border:1px solid #73b6ff66;box-shadow:inset 0 0 0 3px #071126,0 0 24px #067aff38;border-radius:.65rem;width:2.65rem;height:2.65rem}
+.brand-wordmark {display:flex;flex-direction:column;color:#f8faff;white-space:nowrap;font-size:.98rem;font-weight:750;letter-spacing:-.05em;line-height:1}
+.brand-wordmark b {color:#eab3d9;font-weight:750}
+.brand-wordmark small {margin-top:.34rem;font-size:.51rem;letter-spacing:.31em;font-weight:550;color:#88b9e7}
+.hero {background:radial-gradient(circle at 79% 40%,rgba(0,113,245,.15),transparent 30rem),radial-gradient(circle at 94% 15%,rgba(219,84,194,.16),transparent 30rem)}
+.hero-grid::before {background:radial-gradient(circle at 74% 35%,rgba(42,137,255,.18),transparent 20rem),linear-gradient(to bottom,transparent 70%,var(--ink))}
+.hero h1 {font-size:clamp(2.65rem,8.6vw,7.1rem);letter-spacing:-.075em;max-width:13ch}
+.hero h1 em {font-family:inherit;font-style:normal;letter-spacing:-.075em;background:linear-gradient(100deg,#5dbaff 10%,#eeb1db 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-brand-kicker {display:inline-flex;align-items:center;gap:.55rem;font-weight:700;color:#f3f5ff;letter-spacing:.015em;margin:0 0 1.15rem;font-size:.9rem}
+.hero-brand-kicker > span:last-child {color:#86b5ea;font-size:.58rem;letter-spacing:.32em;margin-left:.3rem}
+.brand-mini-mark {width:1.9rem;height:1.9rem;font-size:.65rem;border-radius:.45rem}
+.status-dot {background:#65c5ff;box-shadow:0 0 0 .25rem #64aaff20,0 0 18px #0a84ff}
+.hero-actions .button-primary {background:linear-gradient(110deg,#1066db,#8c4dc6);color:#fff;border-color:#579bfc;box-shadow:0 10px 34px #0a84ff35}
+.hero-actions .button-primary:hover {box-shadow:0 12px 40px #d17db444}
+.hero-portrait-slot {border-color:#5684bf80;box-shadow:0 0 80px #087bff16,0 0 90px #d477cb14}
+.portrait-orbit {border-color:#db90d070}
+.infinity-line {color:#bc7bd7;opacity:.27;filter:drop-shadow(0 0 12px #379dff)}
+.hero-brand-glow {position:absolute;right:7%;top:20%;width:clamp(110px,14vw,245px);aspect-ratio:1;transform:rotate(-11deg);opacity:.65;pointer-events:none;filter:drop-shadow(0 0 30px #208bfa75)}
+.brand-prism {position:absolute;inset:12%;border:2px solid #5dadff88;border-radius:18%;transform:rotate(45deg);box-shadow:inset 0 0 35px #0a84ff35,0 0 30px #8b5cf630}
+.prism-two {inset:24%;border-color:#e5a8d7;transform:rotate(0)}.prism-three {inset:4%;transform:rotate(-5deg);border-color:#7eb8f744}.prism-four {inset:36%;border-color:#e1a1e3;transform:rotate(45deg)}
+.brand-cube-label {position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(2rem,6vw,5rem);font-weight:950;letter-spacing:-.22em;color:#61c6ff;text-shadow:0 0 23px #0a84ff}
+.brand-cube-label span {color:#eab1e0}
+.capability-card,.project-card {border-color:#5c91d233;background:linear-gradient(140deg,#111d32,#0a1122)}
+.capability-card:hover,.project-card:hover {border-color:#70b8ff88}
+.principle-strip {background:linear-gradient(120deg,#0b2451,#25132e);border-color:#8c8de755}
+.contact-section {background:radial-gradient(ellipse at 85% 15%,#5b2d6229,transparent 40rem),#0b1221}
+::selection {background:#73c0ff;color:#071020}
+:focus-visible,h2[tabindex="-1"]:focus {outline-color:#7dc9ff}
+@media(max-width:900px){.hero-brand-glow{top:6rem;right:1rem;width:105px;opacity:.32}.hero h1{max-width:18ch}}
+@media(max-width:480px){.brand-wordmark{font-size:.84rem}.hero-brand-glow{opacity:.18}.hero-brand-kicker>span:last-child{font-size:.46rem}}
+@media(prefers-reduced-motion:reduce){.hero-brand-glow,.brand-prism{animation:none!important}}

@@ -78,7 +78,7 @@ export function Header({ locale, onCommand }: HeaderProps) {
 
   return (
     <header className="site-header">
-      <a className="monogram" href="#top" aria-label={locale === 'en' ? 'Back to the beginning' : 'Voltar ao início'}>TL<span>.</span></a>
+      <a className="monogram brand-lockup" href="#top" aria-label="Leick & S. Software — início"><span className="brand-symbol" aria-hidden="true">LS</span><span className="brand-wordmark">Leick <b>&amp; S.</b><small>SOFTWARE</small></span></a>
       <nav className="desktop-nav" aria-label={locale === 'en' ? 'Primary navigation' : 'Navegação principal'}>
         {copy.navigation.map((item) => {
           const sectionId = item.href.slice(1)
