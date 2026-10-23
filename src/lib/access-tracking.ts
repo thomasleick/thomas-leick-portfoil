@@ -1,6 +1,5 @@
 const ACCESS_LOG_ENDPOINT = 'https://conectyse.com/api/visit.php'
 const ACCESS_LOG_ORIGINS = new Set([
-  'https://k-libra-system-site.vercel.app',
   'https://thomasleick.vercel.app',
 ])
 const REFERRAL_SOURCES = new Set(['conectyse', 'klibra', 'vocalis', 'tchelo'])
